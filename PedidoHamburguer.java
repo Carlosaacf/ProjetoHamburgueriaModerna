@@ -39,14 +39,12 @@ public class PedidoHamburguer extends Hamburguer {
                     if (menu == 1) {
 
                         lanche1.TipoHamburguer = "Carne";
-                    }
-                        else if (menu == 2) {
+                    } else if (menu == 2) {
 
-                            lanche1.TipoHamburguer = "Frango";
-                        }
-                        else if (menu == 3){
+                        lanche1.TipoHamburguer = "Frango";
+                    } else if (menu == 3) {
 
-                            lanche1.TipoHamburguer = "Soja";
+                        lanche1.TipoHamburguer = "Soja";
                     }
 
                     break;
@@ -61,12 +59,10 @@ public class PedidoHamburguer extends Hamburguer {
                     if (menu == 1) {
 
                         lanche1.TipoPão = "Brioche";
-                    }
-                    else if (menu == 2) {
+                    } else if (menu == 2) {
 
                         lanche1.TipoPão = "Centeio";
-                    }
-                    else if (menu == 3){
+                    } else if (menu == 3) {
 
                         lanche1.TipoPão = "Australiano";
                     }
@@ -81,12 +77,10 @@ public class PedidoHamburguer extends Hamburguer {
                     if (menu == 1) {
 
                         lanche1.TipoMolho = "Barbecue";
-                    }
-                    else if (menu == 2) {
+                    } else if (menu == 2) {
 
                         lanche1.TipoMolho = "Maionese com Ervas";
-                    }
-                    else if (menu == 3){
+                    } else if (menu == 3) {
 
                         lanche1.TipoMolho = "Mostarda com Mel";
                     }
