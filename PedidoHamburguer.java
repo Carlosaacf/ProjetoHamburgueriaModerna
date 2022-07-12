@@ -26,33 +26,34 @@ public class PedidoHamburguer extends Hamburguer {
 
             switch (opcao) {
                 case 1:
+
+                    int menu = 0;
                     System.out.println("1 - Carne");
                     System.out.println("2 - Frango");
                     System.out.println("3 - Soja");
+                    menu = sc.nextInt();
 
-                    switch (opcao){
-                        case 1:
+                    if (menu == 1) {
 
-                            lanche1.TipoHamburguer = "Carne";
-                            break;
-                        case 2:
+                        lanche1.TipoHamburguer = "Carne";
+                    }
+                        else if (menu == 2) {
 
                             lanche1.TipoHamburguer = "Frango";
-                            break;
-                        case 3:
+                        }
+                        else if (menu == 3){
 
                             lanche1.TipoHamburguer = "Soja";
-                            break;
-
                     }
-                    break;
 
+                    break;
                 case 2:
                     System.out.println("1 - Prato");
                     System.out.println("2 - Provolone");
                     System.out.println("3 - Cheddar");
+                    menu = sc.nextInt();
 
-                    switch (opcao) {
+                    switch (menu) {
                         case 1:
 
                             lanche1.TipoQueijo = "Prato";
@@ -71,7 +72,8 @@ public class PedidoHamburguer extends Hamburguer {
                 case 3:
                     System.out.println("1 - Acrescentar verdura");
                     System.out.println("2 - Sem verdura");
-                    switch (opcao) {
+                    menu = sc.nextInt();
+                    switch (menu) {
                         case 1:
 
                             lanche1.AcrescentaVerdura = "Com Verdura";
