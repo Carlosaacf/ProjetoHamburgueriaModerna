@@ -2,30 +2,27 @@ package Hamburgueria;
 
 import java.util.Scanner;
 
-public class PedidoHamburguer extends Hamburguer {
-
-    public PedidoHamburguer(String tipoHamburguer, String tipoPão,
-                            String tipoMolho, String tipoQueijo, String acrescentaVerdura) {
-        super(tipoHamburguer, tipoPão, tipoMolho, tipoQueijo, acrescentaVerdura);
-    }
+public class PedidoHamburguer {
 
     public static void main(String args[]) {
 
         Hamburguer lanche1 = new Hamburguer();
 
 
+
+
         Scanner sc = new Scanner(System.in);
         int opcao = 0;
 
-        System.out.println("(1) Escolha o Tipo de Hamburguer: ");
-        System.out.println("(2) Escolha o Tipo de Pão: ");
-        System.out.println("(3) Escolha o Tipo de Molho: ");
-        System.out.println("(4) Escolher Queijo");
-        System.out.println("(5) Acrescentar Verdura ?");
-        System.out.println("(6) Imprimir Pedido");
-        opcao = sc.nextInt();
+        while (opcao !=7) {
 
-        while (opcao != 7) {
+            System.out.println("(1) Escolha o Tipo de Hamburguer: ");
+            System.out.println("(2) Escolha o Tipo de Pão: ");
+            System.out.println("(3) Escolha o Tipo de Molho: ");
+            System.out.println("(4) Escolher Queijo");
+            System.out.println("(5) Acrescentar Verdura ?");
+            System.out.println("(6) Imprimir Pedido");
+            opcao = sc.nextInt();
 
             switch (opcao) {
                 case 1:
@@ -37,14 +34,15 @@ public class PedidoHamburguer extends Hamburguer {
                     menu = sc.nextInt();
 
                     if (menu == 1) {
-
-                        lanche1.TipoHamburguer = "Carne";
+                        lanche1.getTipoHamburguer();
+                        lanche1.setTipoHamburguer("Carne");
                     } else if (menu == 2) {
-
-                        lanche1.TipoHamburguer = "Frango";
+                        lanche1.getTipoHamburguer();
+                        lanche1.setTipoHamburguer("Frango");
                     } else if (menu == 3) {
 
-                        lanche1.TipoHamburguer = "Soja";
+                        lanche1.getTipoHamburguer();
+                        lanche1.setTipoHamburguer("Soja");
                     }
 
                     break;
@@ -93,49 +91,49 @@ public class PedidoHamburguer extends Hamburguer {
                     System.out.println("3 - Cheddar");
                     menu = sc.nextInt();
 
-                    switch (menu) {
-                        case 1:
+                    if (menu == 1) {
 
-                            lanche1.TipoQueijo = "Prato";
-                            break;
-                        case 2:
+                        lanche1.TipoQueijo = "Prato";
+                    }
+                       else if (menu == 2) {
 
                             lanche1.TipoQueijo = "Provolone";
-                            break;
-                        case 3:
+                        }
+                       else if (menu == 3) {
 
                             lanche1.TipoQueijo = "Cheddar";
-                            break;
+                        }
+                        break;
+
+                        case 5:
+                            System.out.println("1 - Acrescentar verdura");
+                            System.out.println("2 - Sem verdura");
+                            menu = sc.nextInt();
+
+                            if (menu == 1) {
+
+                                lanche1.AcrescentaVerdura = "Com Verdura";
+                            }
+                      else if (menu == 2)
+                      {
+
+                                    lanche1.AcrescentaVerdura = "Sem Verdura";
+                                }
+
+                                break;
+
+                                case 6:
+                                    System.out.println("====== Pedido =====");
+                                    System.out.println("Seu pedido foi um Hamburguer de: " + lanche1.getTipoHamburguer()s +
+                                            " Pão " + lanche1.TipoPão);
+                                    System.out.println("Com molho: " + lanche1.TipoMolho + "Com queijo : " + lanche1.TipoQueijo + " E o complemento foi " + lanche1.AcrescentaVerdura);
+                                    System.out.println("_______________________");
+                                    break;
+
+                                default:
+
+                                    System.out.println("Digite uma Opção Valida");
+                            }
                     }
-                    break;
-
-                case 5:
-                    System.out.println("1 - Acrescentar verdura");
-                    System.out.println("2 - Sem verdura");
-                    menu = sc.nextInt();
-                    switch (menu) {
-                        case 1:
-
-                            lanche1.AcrescentaVerdura = "Com Verdura";
-                            break;
-                        case 2:
-
-                            lanche1.AcrescentaVerdura = "Sem Verdura";
-                            break;
-                    }
-                    break;
-
-                case 6:
-                    System.out.println("====== Pedido =====");
-                    System.out.println("Seu pedido foi um Hamburguer de: " + lanche1.TipoHamburguer +
-                            " Pão " + lanche1.TipoPão);
-                    System.out.println("Com molho: " + lanche1.TipoMolho + "Com queijo : " + lanche1.TipoQueijo + " E o complemento foi " + lanche1.AcrescentaVerdura);
-                    break;
-
-                default:
-
-                    System.out.println("Obrigado, volte sempre!");
             }
         }
-    }
-}

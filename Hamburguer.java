@@ -3,15 +3,15 @@ package Hamburgueria;
 public class Hamburguer {
 
 
-   public String TipoHamburguer;
+   private String TipoHamburguer;
 
-   public String TipoPão;
+   private String TipoPão;
 
-   public String TipoMolho;
+   private String TipoMolho;
 
-    public String TipoQueijo;
+    private String TipoQueijo;
 
-    public String AcrescentaVerdura;
+    private String AcrescentaVerdura;
 
 
     public Hamburguer(String tipoHamburguer, String tipoPão,
@@ -25,5 +25,45 @@ public class Hamburguer {
 
     public Hamburguer() {
 
+    }
+
+    public String getTipoHamburguer() {
+        return TipoHamburguer;
+    }
+
+    public void setTipoHamburguer(String tipoHamburguer) {
+        TipoHamburguer = tipoHamburguer;
+    }
+
+    public String getTipoPão() {
+        return TipoPão;
+    }
+
+    public void setTipoPão(String tipoPão) {
+        TipoPão = tipoPão;
+    }
+
+    public String getTipoMolho() {
+        return TipoMolho;
+    }
+
+    public void setTipoMolho(String tipoMolho) {
+        TipoMolho = tipoMolho;
+    }
+
+    public String getTipoQueijo() {
+        return TipoQueijo;
+    }
+
+    public void setTipoQueijo(String tipoQueijo) {
+        TipoQueijo = tipoQueijo;
+    }
+
+    public String getAcrescentaVerdura() {
+        return AcrescentaVerdura;
+    }
+
+    public void setAcrescentaVerdura(String acrescentaVerdura) {
+        AcrescentaVerdura = acrescentaVerdura;
     }
 }
