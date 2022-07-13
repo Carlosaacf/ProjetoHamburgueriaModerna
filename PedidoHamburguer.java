@@ -9,12 +9,10 @@ public class PedidoHamburguer {
         Hamburguer lanche1 = new Hamburguer();
 
 
-
-
         Scanner sc = new Scanner(System.in);
         int opcao = 0;
 
-        while (opcao !=7) {
+        while (opcao != 6) {
 
             System.out.println("(1) Escolha o Tipo de Hamburguer: ");
             System.out.println("(2) Escolha o Tipo de Pão: ");
@@ -55,34 +53,34 @@ public class PedidoHamburguer {
                     menu = sc.nextInt();
 
                     if (menu == 1) {
-
-                        lanche1.TipoPão = "Brioche";
+                        lanche1.getTipoPão();
+                        lanche1.setTipoPão("Brioche");
                     } else if (menu == 2) {
-
-                        lanche1.TipoPão = "Centeio";
+                        lanche1.getTipoPão();
+                        lanche1.setTipoPão("Centeio");
                     } else if (menu == 3) {
-
-                        lanche1.TipoPão = "Australiano";
+                        lanche1.getTipoPão();
+                        lanche1.setTipoPão("Australiano");
                     }
 
                     break;
                 case 3:
                     System.out.println("1 - Barbecue");
                     System.out.println("2 - Maionese com Ervas");
-                    System.out.println("3 - Mostarda com Mel");
+                    System.out.println("3 - Mostarda e Mel");
                     menu = sc.nextInt();
 
                     if (menu == 1) {
 
-                        lanche1.TipoMolho = "Barbecue";
-                    } else if (menu == 2) {
-
-                        lanche1.TipoMolho = "Maionese com Ervas";
+                        lanche1.getTipoMolho();
+                        lanche1.setTipoMolho("Barbecue");
                     } else if (menu == 3) {
-
-                        lanche1.TipoMolho = "Mostarda com Mel";
+                        lanche1.getTipoMolho();
+                        lanche1.setTipoMolho("Maionese com Ervas");
+                    } else if (menu == 3) {
+                        lanche1.getTipoMolho();
+                        lanche1.setTipoMolho("Mostarda e Mel");
                     }
-
                     break;
 
                 case 4:
@@ -93,47 +91,45 @@ public class PedidoHamburguer {
 
                     if (menu == 1) {
 
-                        lanche1.TipoQueijo = "Prato";
+                        lanche1.getTipoQueijo();
+                        lanche1.setTipoQueijo("Prato");
+                    } else if (menu == 2) {
+                        lanche1.getTipoQueijo();
+                        lanche1.setTipoQueijo("Provolone");
+                    } else if (menu == 3) {
+                        lanche1.getTipoQueijo();
+                        lanche1.setTipoQueijo("Cheddar");
                     }
-                       else if (menu == 2) {
+                    break;
 
-                            lanche1.TipoQueijo = "Provolone";
-                        }
-                       else if (menu == 3) {
+                case 5:
+                    System.out.println("1 - Com verdura");
+                    System.out.println("2 - Sem verdura");
+                    menu = sc.nextInt();
 
-                            lanche1.TipoQueijo = "Cheddar";
-                        }
-                        break;
-
-                        case 5:
-                            System.out.println("1 - Acrescentar verdura");
-                            System.out.println("2 - Sem verdura");
-                            menu = sc.nextInt();
-
-                            if (menu == 1) {
-
-                                lanche1.AcrescentaVerdura = "Com Verdura";
-                            }
-                      else if (menu == 2)
-                      {
-
-                                    lanche1.AcrescentaVerdura = "Sem Verdura";
-                                }
-
-                                break;
-
-                                case 6:
-                                    System.out.println("====== Pedido =====");
-                                    System.out.println("Seu pedido foi um Hamburguer de: " + lanche1.getTipoHamburguer()s +
-                                            " Pão " + lanche1.TipoPão);
-                                    System.out.println("Com molho: " + lanche1.TipoMolho + "Com queijo : " + lanche1.TipoQueijo + " E o complemento foi " + lanche1.AcrescentaVerdura);
-                                    System.out.println("_______________________");
-                                    break;
-
-                                default:
-
-                                    System.out.println("Digite uma Opção Valida");
-                            }
+                    if (menu == 1) {
+                        lanche1.getAcrescentaVerdura();
+                        lanche1.setAcrescentaVerdura("Com Verdura");
+                    } else if (menu == 2) {
+                        lanche1.getAcrescentaVerdura();
+                        lanche1.setAcrescentaVerdura("Sem Verdura");
                     }
+
+                    break;
+
+                case 6:
+                    System.out.println("================= Pedido =================");
+                    System.out.println("Seu Pedido foi um Hamburguer de " + lanche1.getTipoHamburguer() +
+                            "\n" + "O Tipo de Pão escolhido foi " + lanche1.getTipoPão());
+                    System.out.println("Acompanhado com molho " + lanche1.getTipoMolho() +"\n" + "O Queijo escolhido foi  : " + lanche1.getTipoQueijo() +
+                            "\n" +"E o Complemento foi " + lanche1.getAcrescentaVerdura());
+                    System.out.println("__________________________________________");
+                    break;
+
+                default:
+
+                    System.out.println("Digite uma Opção Valida");
             }
         }
+    }
+}
